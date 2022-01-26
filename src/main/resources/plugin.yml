@@ -1,0 +1,11 @@
+name: MixelWorldGenerators
+version: ${project.version}
+api-version: 1.16
+main: de.mixelblocks.worlds.MixelWorldGeneratorPlugin
+description: MixelWorldGenerators addet dem Server neue Welt Generatoren.
+
+authors:
+  - LuciferMorningstarDev
+website: https://dash.mixelblocks.de/
+
+load: STARTUP

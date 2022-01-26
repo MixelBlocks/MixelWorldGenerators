@@ -1,0 +1,10 @@
+# Main generator configurations
+generators:
+  VoidGenerator:
+    # adds a bedrock platform to the void if enabled at given coordinates as spawn
+    bedrock:
+      enabled: false
+      x: 0
+      y: 0
+      z: 0
+      radius: 5
