@@ -25,10 +25,10 @@ public class CleanRoomGenerator extends ChunkGenerator {
     public void generateSurface(@NotNull WorldInfo worldInfo, @NotNull Random random, int chunkX, int chunkZ, @NotNull ChunkData chunkData) {
         for (int x = 0; x < 16; x++) {
             for (int z = 0; z < 16; z++) {
-                chunkData.setBlock(x, worldInfo.getMinHeight() + 4, z, Material.GRASS_BLOCK);
-                chunkData.setBlock(x, worldInfo.getMinHeight() + 3, z, Material.STONE);
-                chunkData.setBlock(x, worldInfo.getMinHeight() + 2, z, Material.STONE);
-                chunkData.setBlock(x, worldInfo.getMinHeight() + 1, z, Material.STONE);
+                chunkData.setBlock(x, 4, z, Material.GRASS_BLOCK);
+                chunkData.setBlock(x, 3, z, Material.STONE);
+                chunkData.setBlock(x, 2, z, Material.STONE);
+                chunkData.setBlock(x, 1, z, Material.STONE);
             }
         }
     }
@@ -37,7 +37,7 @@ public class CleanRoomGenerator extends ChunkGenerator {
     public void generateBedrock(@NotNull WorldInfo worldInfo, @NotNull Random random, int chunkX, int chunkZ, @NotNull ChunkData chunkData) {
         for (int x = 0; x < 16; x++) {
             for (int z = 0; z < 16; z++) {
-                chunkData.setBlock(x, worldInfo.getMinHeight(), z, Material.BEDROCK);
+                chunkData.setBlock(x, 0, z, Material.BEDROCK);
             }
         }
     }

@@ -3,9 +3,7 @@ package de.mixelblocks.worlds.generators;
 import de.mixelblocks.worlds.MixelWorldGeneratorPlugin;
 import org.bukkit.Material;
 import org.bukkit.block.Biome;
-import org.bukkit.generator.BiomeProvider;
-import org.bukkit.generator.ChunkGenerator;
-import org.bukkit.generator.WorldInfo;
+import org.bukkit.generator.*;
 import org.bukkit.util.noise.SimplexOctaveGenerator;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -24,8 +22,8 @@ public class WasteLandsGenerator extends ChunkGenerator {
 
     @Override
     public void generateSurface(@NotNull WorldInfo worldInfo, @NotNull Random random, int chunkX, int chunkZ, @NotNull ChunkData chunkData) {
-        SimplexOctaveGenerator generator = new SimplexOctaveGenerator(new Random(worldInfo.getSeed()), 12);
-        generator.setScale(0.005D);
+        SimplexOctaveGenerator generator = new SimplexOctaveGenerator(new Random(worldInfo.getSeed()), 16);
+        generator.setScale(0.010);
         for (int x = 0; x < 16; x++) {
             for (int z = 0; z < 16; z++) {
                 int currentHeight = (int) ((generator.noise(chunkX * 16 + x, chunkZ * 16 + z, 0.5D, 0.5D, true) +1 ) * 15D + 50D);
